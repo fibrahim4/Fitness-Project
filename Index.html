@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker | Stay Fit, Stay Strong</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="logo">
+            <h1>Fitness Tracker</h1>
+        </div>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#workout-plans">Workout Plans</a></li>
+                <li><a href="#progress">Progress</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+            </ul>
+        </nav>
+        <button class="btn join-btn" id="join-now-btn">Join Now</button>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="home-section">
+        <div class="home-content">
+            <h2>Welcome to the Fitness Tracker</h2>
+            <p>Transform your fitness journey with personalized workout plans and real-time progress tracking.</p>
+            <button class="btn get-started-btn">Get Started</button>
+        </div>
+        <div class="home-image">
+            <img src="fitness_home.jpg" alt="Fitness Transformation" class="home-image">
+        </div>
+    </section>
+
+    <!-- Sign-Up Modal -->
+    <div id="signup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Join Fitness Tracker</h2>
+            <form id="signup-form">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <button type="submit" class="btn">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Workout Plans Section -->
+    <section id="workout-plans" class="section workout-plans-section">
+        <h2>Customize Your Workout Plan</h2>
+        <form id="workout-form">
+            <label for="workout-name">Workout Name:</label>
+            <input type="text" id="workout-name" name="workout-name" maxlength="20" placeholder="e.g., Cardio Blast" required>
+
+            <label for="exercise">Exercise:</label>
+            <input type="text" id="exercise" name="exercise" maxlength="20" placeholder="e.g., Push-ups" required>
+
+            <label for="sets">Sets:</label>
+            <input type="number" id="sets" name="sets" min="1" max="10" placeholder="3" required>
+
+            <label for="reps">Reps:</label>
+            <input type="number" id="reps" name="reps" min="1" max="30" placeholder="12" required>
+
+            <label for="duration">Duration (minutes):</label>
+            <input type="number" id="duration" name="duration" min="1" max="300" placeholder="30" required>
+
+            <div class="buttons">
+                <button type="submit" class="btn">Add Workout</button>
+                <button type="reset" class="btn">Clear</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Progress Section -->
+    <section id="progress" class="section progress-section">
+        <h2>Track Your Progress</h2>
+        <form id="progress-form">
+            <label for="workout-name-progress">Workout Name:</label>
+            <input type="text" id="workout-name-progress" name="workout-name-progress" maxlength="20" required>
+
+            <label for="status">Completion Status:</label>
+            <select id="status" name="status" required>
+                <option value="">Select</option>
+                <option value="complete">Complete</option>
+                <option value="incomplete">Incomplete</option>
+            </select>
+
+            <label for="notes">Notes:</label>
+            <textarea id="notes" name="notes" maxlength="200" placeholder="e.g., Felt stronger today!"></textarea>
+
+            <button type="submit" class="btn">Save Progress</button>
+        </form>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="section achievements-section">
+        <h2>Your Fitness Achievements</h2>
+        <div class="achievements-list">
+            <div class="achievement">
+                <img src="achievement_image.jpg" alt="Achievement Icon" class="achievement-icon">
+                <p>Completed 10 Workouts</p>
+            </div>
+            <div class="achievement">
+                <img src="achievement_image.jpg" alt="Achievement Icon" class="achievement-icon">
+                <p>Ran 100 Miles</p>
+            </div>
+            <div class="achievement">
+                <img src="achievement_image.jpg" alt="Achievement Icon" class="achievement-icon">
+                <p>Lifted 500kg Total Weight</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Fitness Tracker. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
