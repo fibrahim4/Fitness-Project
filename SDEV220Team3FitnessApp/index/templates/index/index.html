@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fitness Tracker | Stay Fit, Stay Strong</title>
@@ -34,7 +35,7 @@
             <button class="btn get-started-btn">Get Started</button>
         </div>
         <div class="home-image">
-            <img src="fitness_home.jpg" alt="Fitness Transformation" class="home-image">
+            <img src="{% static 'images/fitness_home.png' %}" alt="Fitness Transformation" class="home-image">
         </div>
     </section>
 
@@ -103,15 +104,15 @@
         <h2>Your Fitness Achievements</h2>
         <div class="achievements-list">
             <div class="achievement">
-                <img src="achievement_image.jpg" alt="Achievement Icon" class="achievement-icon">
+                <img src="{% static 'images/achievement_image.png' %}" alt="Achievement Icon" class="achievement-icon">
                 <p>Completed 10 Workouts</p>
             </div>
             <div class="achievement">
-                <img src="achievement_image.jpg" alt="Achievement Icon" class="achievement-icon">
+                <img src="{% static 'images/achievement_image.png' %}" alt="Achievement Icon" class="achievement-icon">
                 <p>Ran 100 Miles</p>
             </div>
             <div class="achievement">
-                <img src="achievement_image.jpg" alt="Achievement Icon" class="achievement-icon">
+                <img src="{% static 'images/achievement_image.png' %}" alt="Achievement Icon" class="achievement-icon">
                 <p>Lifted 500kg Total Weight</p>
             </div>
         </div>
