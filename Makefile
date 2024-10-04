@@ -8,3 +8,6 @@ init:
 migrate:
 	./scripts/migrate.sh
 
+run:
+	./scripts/run.sh
+
