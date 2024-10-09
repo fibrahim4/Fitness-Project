@@ -25,10 +25,10 @@
             </ul>
         </nav>
         <nav class="nav-links">
-          <ul>
-            <li><a href="/users/login">Login</a></li>
-            <button class="btn join-btn" id="join-now-btn">Join Now</button>
-          </ul>
+            <ul>
+                <li><a href="/users/login">Login</a></li>
+                <button class="btn join-btn" id="join-now-btn">Join Now</button>
+            </ul>
         </nav>
     </header>
 
@@ -59,28 +59,35 @@
 
     <!-- Workout Plans Section -->
     <section id="workout-plans" class="section workout-plans-section">
-        <h2>Customize Your Workout Plan</h2>
-        <form id="workout-form">
-            <label for="workout-name">Workout Name:</label>
-            <input type="text" id="workout-name" name="workout-name" maxlength="20" placeholder="e.g., Cardio Blast" required>
+        <!-- Customize Your Workout Plan Form -->
+        <div id="customize-your-workout-plan">
+            <h2>Customize Your Workout Plan</h2>
+            <form id="workout-form" action="" method="post">
+                {% csrf_token %}
+                <label for="workout-name">Workout Name</label>
+                <input type="text" id="workout-name" name="workout_name" required>
+        
+                <label for="exercise">Exercise</label>
+                <input type="text" id="exercise" name="exercise" required>
+        
+                <label for="sets">Sets</label>
+                <input type="number" id="sets" name="sets" min="1" max="10" required>
+        
+                <label for="reps">Reps</label>
+                <input type="number" id="reps" name="reps" min="1" max="30" required>
+        
+                <label for="duration">Duration (minutes)</label>
+                <input type="number" id="duration" name="duration" min="1" max="300" required>
+        
+                <button type="submit">Create Workout</button>
+            </form>
+        </div>
 
-            <label for="exercise">Exercise:</label>
-            <input type="text" id="exercise" name="exercise" maxlength="20" placeholder="e.g., Push-ups" required>
-
-            <label for="sets">Sets:</label>
-            <input type="number" id="sets" name="sets" min="1" max="10" placeholder="3" required>
-
-            <label for="reps">Reps:</label>
-            <input type="number" id="reps" name="reps" min="1" max="30" placeholder="12" required>
-
-            <label for="duration">Duration (minutes):</label>
-            <input type="number" id="duration" name="duration" min="1" max="300" placeholder="30" required>
-
-            <div class="buttons">
-                <button type="submit" class="btn">Add Workout</button>
-                <button type="reset" class="btn">Clear</button>
-            </div>
-        </form>
+        <!-- Display Created Workout Plans -->
+        <div id="your-workout-plans">
+            <h2>Your Workout Plans</h2>
+            <ul id="workout-plan-list"></ul> <!-- List to display workout plans -->
+        </div>
     </section>
 
     <!-- Progress Section -->
@@ -102,6 +109,12 @@
 
             <button type="submit" class="btn">Save Progress</button>
         </form>
+
+        <!-- Display Progress Submissions -->
+        <section id="progress-list">
+        <h2>Your Current Progress</h2>
+        <ul id="progress-list"></ul> <!-- List to display progress submissions -->
+        </section>
     </section>
 
     <!-- Achievements Section -->
