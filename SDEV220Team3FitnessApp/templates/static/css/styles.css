@@ -16,7 +16,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 1rem 2rem; /* Added side padding */
     background-color: #0d6efd;
     color: white;
     position: sticky;
@@ -133,22 +133,26 @@ form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding: 1rem;
+    padding: 1.5rem; /* Increased padding for better spacing */
     background-color: #f1f3f5;
     border-radius: 10px;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.05);
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
     padding: 0.75rem;
     border: 2px solid #adb5bd;
     border-radius: 5px;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
 }
 
-input:focus, select:focus, textarea:focus {
+input:focus,
+select:focus,
+textarea:focus {
     border-color: #00b4d8;
-    outline: none;
+    box-shadow: 0 0 5px rgba(0, 180, 216, 0.5); /* Added focus shadow effect */
 }
 
 .buttons {
@@ -163,11 +167,12 @@ button {
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, transform 0.2s; /* Added transform for hover */
 }
 
 button:hover {
     background-color: #023e8a;
+    transform: translateY(-2px); /* Lift effect on hover */
 }
 
 /* Achievements Section */
@@ -278,4 +283,92 @@ footer {
         opacity: 1;
         transform: scale(1);
     }
+}
+
+/* Customize Your Workout Plan Section */
+#customize-your-workout-plan {
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#customize-your-workout-plan h2 {
+    text-align: center;
+    color: #0077b6;
+}
+
+/* Your Workout Plans Section */
+#your-workout-plans {
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#your-workout-plans h2 {
+    text-align: center;
+    color: #0077b6;
+}
+
+#your-workout-plans ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+}
+
+#your-workout-plans li {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+}
+
+/* Delete Button Styles */
+.delete-btn {
+    background-color: #dc3545; /* Bootstrap's danger color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 1rem; /* Spacing between button and text */
+}
+
+.delete-btn:hover {
+    background-color: #c82333; /* Darker red for hover */
+}
+
+/* Highlight Specific Days */
+.highlight {
+    background-color: #ffd166; /* Yellow for highlighted days */
+    color: #333;
+}
+
+/* Progress List Section */
+#progress-list {
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#progress-list h2 {
+    text-align: center;
+    color: #0077b6;
+}
+
+#progress-list ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+}
+
+#progress-list li {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
 }
